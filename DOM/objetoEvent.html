@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>DOM</title>
+</head>
+<body>
+    <div id="secondary" 
+        style="background-color: brown; 
+        height: 300px;
+        color: #fff;
+        display: flex; 
+        justify-content: center;
+        align-items: center">
+        <p style="font-size: 1.2rem;">Parágrafo para diferenciar o target do current target</p>
+    </div>
+    
+    <script>
+        let divInterna = document.querySelector('#secondary')
+        
+        divInterna.addEventListener('click',(event)=>{
+            console.log(this)
+            console.log(event)
+            console.log('Current target: ',event.currentTarget)
+            console.log('Target: ',event.target)
+        })
+
+        
+
+    </script>
+</body>
+</html>
