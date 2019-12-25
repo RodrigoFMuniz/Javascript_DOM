@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>DOM</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Delegação de eventos</h1>
+        <ul style="padding: 20px;">
+            <li>lista 1</li>
+            <li>lista 2</li>
+            <li>lista 3</li>
+        </ul>
+    </div>
+    
+    <script>
+        let ul = document.querySelector('ul')
+        let lis = document.querySelectorAll('li')
+        
+
+        // lis[0].addEventListener('click',(event)=>{
+        //     console.log('Clicou')
+        // })
+
+        ul.addEventListener('click', function(event){
+            event.stopPropagation()
+            console.log('clicou')
+            console.log('Current Target: ',event.currentTarget)
+            console.log('target: ',event.target)
+        })
+
+        
+
+    </script>
+</body>
+</html>
