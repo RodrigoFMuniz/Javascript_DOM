@@ -7,14 +7,23 @@
     <title>DOM</title>
 </head>
 <body>
-    <p>Olá</p>
+    <h1>Javascript DOM</h1>
+    <button onclick="clicar()">DOM Level 0</button>
+    <button id="lvl2">DOM Level 2</button>
 
     <script>
-        let p = document.querySelector('p')
-        p.addEventListener('click', ()=>{
-            p.innerText = 'Mudei'
-        })        
+        let h1 = document.querySelector('h1')
+        let btn = document.querySelector('#lvl2')
 
+        //DOM lvl 0
+        function clicar(){
+            h1.innerText = "Mudou o texto com DOM level 0"
+        }
+        
+        //DOM lvl 2
+        btn.addEventListener('click', ()=>{
+            h1.innerText = 'Mudou o texto com DOM level 2'
+        })     
 
     </script>
 </body>
