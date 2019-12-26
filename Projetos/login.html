@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Login</title>
+</head>
+<body>
+    <div class="container">
+        <h1>login</h1>
+        <form action="#" method="POST">
+            <div>
+                <label for="txtUser">Usuário</label>
+                <input type="text" id="txtUser" name="user">
+            </div>
+            <div>
+                <label for="txtPass">Senha</label>
+                <input type="password" id="txtPass" name="pass">
+            </div>
+            <button type="submit" id="btnLogin">Logar</button>
+        </form>
+    </div>
+    <script>
+        (function(){
+            'use strict'
+            let $form = document.querySelector('form')
+            let $user = document.querySelector('#txtUser')
+            let $pass = document.querySelector('#txtPass')
+            let $btn = document.querySelector('#btnLogin')
+
+            $form.addEventListener('submit', (event)=>{
+                if(!$user.value || !$pass.value){
+                    alert('Preencha todos os campos')
+                    event.preventDefault()
+                }
+            })
+        })()
+    </script>
+</body>
+</html>
